@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sugarbook</title>
+    <script type="text/javascript" src="d3/d3.js"></script>
+    <script type="text/javascript" src="d3/d3.csv.js"></script>
+    <script type="text/javascript" src="d3/d3.time.js"></script>
+
+    <style type="text/css">
+
+body {
+    background: black;
+    color: white;
+    fill: #fff;
+    font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+    font: 300 .7em "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+}
+
+.day {
+  fill: #fff;
+  stroke: #ccc;
+}
+
+.x line, .y line {
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+rule {
+  color: #fff;
+}
+
+.rule line {
+color: #fff;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.rule line.axis {
+color: #fff;
+  stroke: #fff;
+}
+
+.line {
+color: #fff;
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+</style>
+
+</head>
+<body>
+<h1>sugarbook prototype</h1>
+<p id="rangeMessage">
+Available data is from ... to ...
+<fieldset id="dates">
+  <legend>Date Range</legend>  
+<label for="startDate">Beginning</label>
+<input id="startDateInput" name="startDate" class="text" type="text" value="1/1/2012"/>
+<label for="endDate">Ending</label>
+<input id="endDateInput" name="endDate" class="text" type="text" value="5/1/2012"/>
+<input type="button" value="submit" onClick="setDates()" />
+</fieldset>
+<p>
+<p>
+<div id="main-view"></div>
+<p>
+<script type="text/javascript" src="./sugarbook-cgm.js"></script>
+</body>
+</html>
